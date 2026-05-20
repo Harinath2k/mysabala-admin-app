@@ -7,7 +7,8 @@ import { AddFoodItem } from "./screens/AddFoodItem";
 import { EditFoodItem } from "./screens/EditFoodItem";
 import { OrdersManagement } from "./screens/OrdersManagement";
 import { Profile } from "./screens/Profile";
-
+import { Categories  } from "./screens/Categories";
+import { AddCategory} from "./components/Ui/AddCategory";
 import { Layout } from "./components/Layout";
 import { ProtectedRoute } from "./features/auth/ProtectedRoute";
 
@@ -55,6 +56,15 @@ export const router = createBrowserRouter([
           {
             path: "profile",
             Component: Profile,
+          },
+
+          {
+            path: "categories",
+            Component: Categories,
+          },
+          {
+            path: "categories/add",
+            Component: AddCategory,
           },
         ],
       },

@@ -1,7 +1,8 @@
 import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
-import { LayoutDashboard, UtensilsCrossed, ShoppingCart, LogOut, User } from "lucide-react";
+import { LayoutDashboard, UtensilsCrossed, ShoppingCart, LogOut, User, List} from "lucide-react";
 
 export function Layout() {
+
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -14,6 +15,8 @@ export function Layout() {
     { path: "/food-items", icon: UtensilsCrossed, label: "Food Items" },
     { path: "/orders", icon: ShoppingCart, label: "Orders" },
     { path: "/profile", icon: User, label: "Profile" },
+    { path: "/categories", icon: List, label: "Categories" },
+  //  {/*{ path: "/categories/add", icon: List, label: "Add Category" } */}
   ];
 
   return (
